@@ -221,6 +221,19 @@ section {
     justify-content: center;
 }
 
+.service-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+
 .service i {
     font-size: 3rem;
     margin-bottom: 0.5rem;
@@ -246,13 +259,6 @@ section {
 
 .service:hover {
     transform: scale(1.1); /* Slightly enlarge the service box */
-}
-
-.service:hover .service-description {
-    display: block;
-    width: 100%;
-    height: auto;
-    padding-top: 0.5rem;
 }
 
 .service.expanded {
