@@ -112,13 +112,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Highlighting active section
     const sections = document.querySelectorAll('section');
     const navLi = document.querySelectorAll('nav ul li a');
+    const header = document.querySelector('header');
 
-    window.addEventListener('scroll', () => {
-        let current = '';
+    const highlightNav = () => {
+        let current = 'home';
+        const offset = header.offsetHeight;
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= (sectionTop - sectionHeight / 2)) {
+            const sectionTop = section.offsetTop - offset;
+            if (pageYOffset >= sectionTop) {
                 current = section.getAttribute('id');
             }
         });
@@ -129,32 +130,48 @@ document.addEventListener("DOMContentLoaded", () => {
                 li.classList.add('active');
             }
         });
-    });
-});
+    };
 
-document.addEventListener('DOMContentLoaded', (event) => {
+    window.addEventListener('scroll', highlightNav);
+    highlightNav();
+
+    // Auto-expand services on scroll
+    const serviceElements = document.querySelectorAll('.service');
+    const serviceObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('expanded');
+            } else {
+                entry.target.classList.remove('expanded');
+            }
+        });
+    }, { threshold: 0.5 });
+    serviceElements.forEach(service => serviceObserver.observe(service));
+
+    // Contact form submission
     const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
+            const serviceID = 'service_miceszk';
+            const templateID = 'template_pof5zwc';
 
-        const serviceID = 'service_miceszk';
-        const templateID = 'template_pof5zwc';
+            const templateParams = {
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value
+            };
 
-        const templateParams = {
-            name: form.name.value,
-            email: form.email.value,
-            message: form.message.value
-        };
-
-        emailjs.send(serviceID, templateID, templateParams)
-            .then(() => {
-                alert('Message sent successfully!');
-                form.reset();  // Clears the form inputs
-            }, (err) => {
-                alert('Failed to send message. Error: ' + JSON.stringify(err));
-            });
-    });
+            emailjs.send(serviceID, templateID, templateParams)
+                .then(() => {
+                    alert('Message sent successfully!');
+                    form.reset();  // Clears the form inputs
+                }, (err) => {
+                    alert('Failed to send message. Error: ' + JSON.stringify(err));
+                });
+        });
+    }
 });
 
 function toggleMoreProjects() {
