@@ -135,18 +135,15 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', highlightNav);
     highlightNav();
 
-    // Auto-expand services on scroll
-    const serviceElements = document.querySelectorAll('.service');
-    const serviceObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('expanded');
-            } else {
-                entry.target.classList.remove('expanded');
-            }
+    // Toggle service descriptions
+    const serviceButtons = document.querySelectorAll('.service-toggle');
+    serviceButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const service = button.closest('.service');
+            const expanded = service.classList.toggle('expanded');
+            button.setAttribute('aria-expanded', expanded);
         });
-    }, { threshold: 0.5 });
-    serviceElements.forEach(service => serviceObserver.observe(service));
+    });
 
     // Contact form submission
     const form = document.getElementById('contactForm');
