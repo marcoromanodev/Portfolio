@@ -9,9 +9,13 @@ body {
     text-align: center; /* Center all text */
 }
 
-/* Graffiti style for headings */
-h1, h2, h3, h4, h5, h6, .service-title {
-    font-family: 'Rubik Puddles', cursive;
+/* Graffiti spray paint style for headings and navigation */
+h1, h2, h3, h4, h5, h6, .service-title, header nav ul li a {
+    font-family: 'Rubik Wet Paint', cursive;
+    text-shadow:
+        0 2px 2px rgba(0, 0, 0, 0.8),
+        0 5px 5px rgba(0, 0, 0, 0.6),
+        0 8px 8px rgba(0, 0, 0, 0.4);
 }
 
 header {
