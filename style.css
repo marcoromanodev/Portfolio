@@ -10,7 +10,7 @@ body {
 }
 
 /* Graffiti spray paint style for headings and navigation */
-h1, h2, h3, h4, h5, h6, .service-title, header nav ul li a {
+h1, h2, h3, h4, h5, h6, .service-title, header nav ul li a, .graffiti {
     font-family: 'Nosifer', cursive;
     text-shadow:
         0 0 5px rgba(0, 0, 0, 0.8),
