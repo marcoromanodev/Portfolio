@@ -17,6 +17,35 @@ h1, h2, h3, h4, h5, h6, .service-title, header nav ul li a {
         0 0 10px rgba(0, 0, 0, 0.6);
 }
 
+/* Adjust font sizes for graffiti-styled text */
+h1 {
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.35rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+h4 {
+    font-size: 0.95rem;
+}
+
+h5 {
+    font-size: 0.8rem;
+}
+
+h6 {
+    font-size: 0.6rem;
+}
+
+.service-title {
+    font-size: 0.9rem;
+}
+
 header {
     background-color: #333;
     padding: 1rem 0;
@@ -43,6 +72,7 @@ header nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    font-size: 0.9rem;
 }
 
 header nav ul li a.active, header nav ul li a:hover {
@@ -70,7 +100,6 @@ section {
     margin: 0;
     padding: 0;
     line-height: 1.5;
-    font-size: 2.5rem; /* Increase font size */
 }
 
 .intro h2 {
