@@ -141,6 +141,15 @@ section {
     background-color: #333;
 }
 
+#see-more-btn {
+    background-color: #000;
+    color: #fff;
+}
+
+#see-more-btn:hover {
+    background-color: #333;
+}
+
 .social-links {
     margin-top: 20px;
     display: flex;
@@ -348,7 +357,8 @@ section {
 }
 
 .contact {
-    background-color: #444;
+    background-color: transparent;
+    border: 2px solid #fff;
     padding: 2rem;
     border-radius: 10px;
     margin-top: 2rem;
