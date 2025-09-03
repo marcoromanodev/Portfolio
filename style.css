@@ -404,6 +404,12 @@ footer {
     bottom: 0;
 }
 
+footer p.graffiti {
+    font-size: 0.6rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8),
+                 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -444,6 +450,27 @@ header nav ul li a.active {
 .tech-icon span {
     margin-top: 0.5rem;
     font-size: 1rem;
+}
+
+/* Apply black outline and glow to buttons and icons */
+button:not(.service-toggle) {
+    border: 2px solid black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8),
+                0 0 10px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8),
+                 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.service i,
+.social-links a i,
+.tech-icon i {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8),
+                 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.social-links img {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8))
+            drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
 }
 
 @media (max-width: 768px) {
