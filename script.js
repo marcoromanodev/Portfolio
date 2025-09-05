@@ -35,6 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(typeLine2, 100); // Adjust typing speed here
         } else {
             currentCharIndex = 0;
+            setTimeout(deleteLine2, 500); // Pause before deleting line 2
+        }
+    }
+
+    function deleteLine2() {
+        if (line2Element.innerHTML.length > 0) {
+            line2Element.innerHTML = line2Element.innerHTML.substring(0, line2Element.innerHTML.length - 1);
+            setTimeout(deleteLine2, 50); // Adjust deleting speed here
+        } else {
             setTimeout(typeJobTitle, 500); // Pause before typing job titles
         }
     }
