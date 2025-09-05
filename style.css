@@ -107,6 +107,20 @@ section {
     margin-top: 1rem; /* Add margin top */
 }
 
+.headshot-container {
+    margin: 1rem 0;
+}
+
+.headshot {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8),
+                0 0 10px rgba(0, 0, 0, 0.6);
+    object-fit: cover;
+}
+
 .more-projects {
     display: none;
     flex-wrap: wrap;
