@@ -36,6 +36,13 @@ img {
     display: block;
 }
 
+.icon-img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+}
+
 .container {
     width: min(1100px, 92vw);
     margin: 0 auto;
@@ -253,10 +260,6 @@ img {
     transition: all 0.2s ease;
 }
 
-.social-row a i {
-    font-size: 1.05rem;
-}
-
 .social-row a:hover {
     transform: translateY(-2px);
     border-color: rgba(255, 123, 95, 0.6);
@@ -415,6 +418,14 @@ img {
     border: 1px solid var(--border);
 }
 
+.chip-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    margin-right: 0.4rem;
+    display: inline-block;
+}
+
 .stack-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
@@ -426,6 +437,8 @@ img {
 }
 
 .chip {
+    display: inline-flex;
+    align-items: center;
     padding: 0.35rem 0.7rem;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.05);
@@ -558,10 +571,6 @@ img {
     height: 48px;
     font-size: 1.15rem;
 }
-.service-card i,
-.info-card i {
-    color: #fff;
-}
 
 .education-list {
     list-style: none;
@@ -581,10 +590,6 @@ img {
     border-radius: 12px;
     padding: 0.75rem 0.9rem;
     box-shadow: var(--shadow);
-}
-
-.education-list i {
-    color: #fff;
 }
 
 .education-list a {
