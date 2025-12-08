@@ -1,165 +1,45 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const line1Text = "Hello World,";
-    const line2Text = "I am Marco Romano Jr";
-    const jobTitles = [
-        "Software Developer",
-        "Web3 Developer",
-        "Front End Developer",
-        "Back End Developer",
-        "Mobile Developer"
-    ];
+document.addEventListener('DOMContentLoaded', () => {
+    const keywordEl = document.getElementById('hero-keyword');
+    const keywords = ['full-stack', 'Web3', 'product-led', 'frontend', 'backend'];
+    let keywordIndex = 0;
 
-    let currentTextIndex = 0;
-    let currentCharIndex = 0;
-    const line1Element = document.getElementById('line1');
-    const line2Element = document.getElementById('line2');
-    const line3Element = document.getElementById('intro-text-line3');
-    const line4Element = document.getElementById('intro-text-line4');
-
-    function typeLine1() {
-        if (currentCharIndex < line1Text.length) {
-            line1Element.innerHTML += line1Text.charAt(currentCharIndex);
-            currentCharIndex++;
-            setTimeout(typeLine1, 100); // Adjust typing speed here
-        } else {
-            line1Element.innerHTML = "";
-            currentCharIndex = 0;
-            setTimeout(typeLine2, 500); // Pause before typing next line
-        }
-    }
-
-    function typeLine2() {
-        if (currentCharIndex < line2Text.length) {
-            line2Element.innerHTML += line2Text.charAt(currentCharIndex);
-            currentCharIndex++;
-            setTimeout(typeLine2, 100); // Adjust typing speed here
-        } else {
-            currentCharIndex = 0;
-            setTimeout(deleteLine2, 500); // Pause before deleting line 2
-        }
-    }
-
-    function deleteLine2() {
-        if (line2Element.innerHTML.length > 0) {
-            line2Element.innerHTML = line2Element.innerHTML.substring(0, line2Element.innerHTML.length - 1);
-            setTimeout(deleteLine2, 50); // Adjust deleting speed here
-        } else {
-            setTimeout(typeJobTitle, 500); // Pause before typing job titles
-        }
-    }
-
-    function typeJobTitle() {
-        const currentJobTitle = jobTitles[currentTextIndex];
-        if (currentCharIndex < currentJobTitle.length) {
-            line3Element.innerHTML += currentJobTitle.charAt(currentCharIndex);
-            currentCharIndex++;
-            setTimeout(typeJobTitle, 100); // Adjust typing speed here
-        } else {
-            setTimeout(moveDeveloperToLine4, 500); // Shorter pause before moving "Developer" to line 4
-        }
-    }
-
-    function moveDeveloperToLine4() {
-        const currentJobTitle = jobTitles[currentTextIndex];
-        if (line3Element.innerHTML.includes("Developer")) {
-            line4Element.innerHTML = "Developer";
-            line3Element.innerHTML = line3Element.innerHTML.replace(" Developer", "");
-            setTimeout(deleteJobTitle, 2000); // Pause before deleting
-        }
-    }
-
-    function deleteJobTitle() {
-        const currentJobTitle = jobTitles[currentTextIndex];
-        if (line4Element.innerHTML.length > 0) {
-            line4Element.innerHTML = "";
-        } else if (line3Element.innerHTML.length > 0) {
-            line3Element.innerHTML = line3Element.innerHTML.substring(0, line3Element.innerHTML.length - 1);
-        } else {
-            line3Element.innerHTML = "";
-            line4Element.innerHTML = "";
-            currentTextIndex = (currentTextIndex + 1) % jobTitles.length;
-            currentCharIndex = 0;
-            setTimeout(typeJobTitle, 500); // Pause before typing next job title
-            return;
-        }
-        setTimeout(deleteJobTitle, 50); // Adjust deleting speed here
-    }
-
-    typeLine1();
-
-    const character = document.getElementById('character');
-    const speechBubble = document.getElementById('speech-bubble');
-    speechBubble.style.display = 'block';
-
-    function typeSpeechBubble() {
-        const speechText = "Hello World!";
-        let charIndex = 0;
-
-        function typeChar() {
-            if (charIndex < speechText.length) {
-                speechBubble.innerHTML += speechText.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeChar, 100); // Adjust typing speed here
-            }
-        }
-
-        typeChar();
-    }
-
-    typeSpeechBubble();
+    setInterval(() => {
+        keywordIndex = (keywordIndex + 1) % keywords.length;
+        keywordEl.textContent = keywords[keywordIndex];
+    }, 2000);
 
     // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+        anchor.addEventListener('click', event => {
+            const targetId = anchor.getAttribute('href');
+            const target = document.querySelector(targetId);
+            if (target) {
+                event.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
     });
 
-    // Highlighting active section
-    const sections = document.querySelectorAll('section');
-    const navLi = document.querySelectorAll('nav ul li a');
-    const header = document.querySelector('header');
-
-    const highlightNav = () => {
-        let current = 'home';
-        const offset = header.offsetHeight;
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - offset;
-            if (pageYOffset >= sectionTop) {
-                current = section.getAttribute('id');
+    // Active nav highlighting
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute('href')));
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const index = sections.indexOf(entry.target);
+            if (entry.isIntersecting && index >= 0) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                navLinks[index].classList.add('active');
             }
         });
+    }, { threshold: 0.4 });
 
-        navLi.forEach(li => {
-            li.classList.remove('active');
-            if (li.getAttribute('href').includes(current)) {
-                li.classList.add('active');
-            }
-        });
-    };
+    sections.forEach(section => section && observer.observe(section));
 
-    window.addEventListener('scroll', highlightNav);
-    highlightNav();
-
-    // Toggle service descriptions
-    const serviceButtons = document.querySelectorAll('.service-toggle');
-    serviceButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const service = button.closest('.service');
-            const expanded = service.classList.toggle('expanded');
-            button.setAttribute('aria-expanded', expanded);
-        });
-    });
-
-    // Contact form submission
+    // EmailJS contact form
     const form = document.getElementById('contactForm');
     if (form) {
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', e => {
             e.preventDefault();
-
             const serviceID = 'service_miceszk';
             const templateID = 'template_pof5zwc';
 
@@ -172,23 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
             emailjs.send(serviceID, templateID, templateParams)
                 .then(() => {
                     alert('Message sent successfully!');
-                    form.reset();  // Clears the form inputs
-                }, (err) => {
+                    form.reset();
+                })
+                .catch(err => {
                     alert('Failed to send message. Error: ' + JSON.stringify(err));
                 });
         });
     }
 });
-
-function toggleMoreProjects() {
-    const moreProjects = document.getElementById('more-projects');
-    const seeMoreBtn = document.getElementById('see-more-btn');
-
-    if (moreProjects.style.display === 'none') {
-        moreProjects.style.display = 'flex';
-        seeMoreBtn.innerText = 'See Less';
-    } else {
-        moreProjects.style.display = 'none';
-        seeMoreBtn.innerText = 'See More';
-    }
-}

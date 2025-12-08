@@ -3,327 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+    <title>Marco Romano Jr | Modern Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="logos/8BitMARCO.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.6.2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
             emailjs.init("0L5svOXr2vc7kf_fS");
         })();
     </script>
-
-    <link rel="icon" href="logos/8BitMARCO.ico" type="image/x-icon">
-    <title>Marco Romano Jr * Web3 Developer</title>
-    <style>
-        /* Add custom style for X icon */
-        .fab.fa-x-twitter:before {
-            content: "\f099"; /* This is the code for the Twitter icon; you will need to replace it with the X icon when available */
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container nav-layout">
+            <div class="brand">
+                <span class="dot"></span>
+                <span class="name">Marco Romano Jr</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#stack" class="nav-link">Tech</a></li>
+                    <li><a href="#portfolio" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a class="ghost-btn" href="Marco_Romano (SDE).pdf" target="_blank" rel="noopener">Resume</a>
+                <a class="primary-btn" href="#contact">Let’s talk</a>
+            </div>
+        </div>
     </header>
+
     <main>
-        <section id="home" class="intro">
-            <div class="headshot-container">
-                <img src="headshot.jpeg" alt="Headshot" class="headshot">
-            </div>
-            <h1 id="line1"></h1>
-            <h1 id="line2"></h1>
-            <h2 id="intro-text-line3"></h2>
-            <h2 id="intro-text-line4"></h2>
-            <button class="resume-button download-resume-button" onclick="window.location.href='Marco_Romano (SDE).pdf'">Download Resume</button>
-            <div class="social-links">
-                <a href="https://stackoverflow.com/users/27101244/marcoromanodev" target="_blank"><i class="fab fa-stack-overflow"></i></a>
-                <a href="https://www.instagram.com/MarcoRomanoJr" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://github.com/marcoromanodev" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/marcoromanojr" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://x.com/MarcoRomanoJr" target="_blank">
-                    <img src="logos/xlogo.png" alt="X logo" style="width: 24px; height: 24px;">
-                </a>
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Chicago-based developer • Remote friendly</p>
+                    <h1>Designing & building <span id="hero-keyword">full-stack</span> experiences that feel future-ready.</h1>
+                    <p class="lede">I craft performant web and Web3 products with a product mindset— shipping reliable features, shipping clean UI, and shipping on time.</p>
+                    <div class="hero-actions">
+                        <a class="primary-btn" href="#portfolio">View featured work</a>
+                        <a class="ghost-btn" href="#about">Learn more</a>
+                    </div>
+                    <div class="meta-bar">
+                        <div class="meta-chip"><i class="fa-solid fa-rocket"></i> Startup-ready builds</div>
+                        <div class="meta-chip"><i class="fa-solid fa-shield-halved"></i> Secure by design</div>
+                        <div class="meta-chip"><i class="fa-solid fa-clock"></i> Rapid delivery</div>
+                    </div>
+                    <div class="social-row">
+                        <a href="https://github.com/marcoromanodev" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/marcoromanojr" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/MarcoRomanoJr" aria-label="X" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/MarcoRomanoJr" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="glass-card">
+                        <img src="headshot.jpeg" alt="Portrait of Marco Romano Jr" class="headshot-modern">
+                        <div class="status">
+                            <span class="pulse"></span>
+                            Open to new opportunities
+                        </div>
+                        <div class="pill-row">
+                            <span class="pill">Web3</span>
+                            <span class="pill">Full-stack</span>
+                            <span class="pill">Product-minded</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        
-        <section id="about" class="about">
-            <div class="character-container">
-                <img id="character" src="logos/8BitMARCO.ico" alt="8-bit Character">
-                <div id="speech-bubble"></div>
-            </div>
-            <h1>About Me</h1>
-            <p>Hello! I'm Marco Romano Jr, a dedicated and detail-oriented Software Development Engineer with a strong foundation in computer science and a passion for crafting high-performance, scalable, and maintainable software solutions.</p>
-            <p>I am committed to continuous learning with emerging technologies to drive innovation and enhance product performance.</p>
-            
-            <h2>Tech Stack</h2>
-            <p>Using a combination of cutting-edge technologies and reliable open-source software, I build user-focused, performant apps and websites for smartphones, tablets, and desktops.</p>
-            <div class="tech-icons">
-                <div class="tech-icon">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML</span>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">About</p>
+                    <h2>Blending software craftsmanship with business impact.</h2>
+                    <p class="lede">I’m a Software Development Engineer with a focus on scalable architectures, delightful interfaces, and dependable delivery. I iterate quickly, measure outcomes, and keep shipping.</p>
                 </div>
-                <div class="tech-icon">
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-js"></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-php"></i>
-                    <span>PHP</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-java"></i>
-                    <span>Java</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-python"></i>
-                    <span>Python</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fas fa-database"></i>
-                    <span>MySQL</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-react"></i>
-                    <span>React</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-node-js"></i>
-                    <span>Node.js</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-js"></i>
-                    <span>TypeScript</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fas fa-leaf"></i>
-                    <span>MongoDB</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-cuttlefish"></i>
-                    <span>C++</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fas fa-robot"></i>
-                    <span>ChatGPT</span>
+                <div class="cards-grid">
+                    <article class="info-card">
+                        <div class="icon-circle"><i class="fa-solid fa-network-wired"></i></div>
+                        <h3>Systems thinking</h3>
+                        <p>From cloud to client, I design resilient systems with predictable performance and clean handoffs between layers.</p>
+                    </article>
+                    <article class="info-card">
+                        <div class="icon-circle"><i class="fa-solid fa-cubes"></i></div>
+                        <h3>Product focus</h3>
+                        <p>Experience across SaaS, ecommerce, and agency work means I build what matters—features that move metrics.</p>
+                    </article>
+                    <article class="info-card">
+                        <div class="icon-circle"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3>Polished delivery</h3>
+                        <p>Modern UI, thoughtful animations, and accessibility-first practices so every release feels premium.</p>
+                    </article>
                 </div>
             </div>
-            
-            <br>
-            <br>
-            <br>
-            
-            <h2>Education</h2>
-            <div id="education-pointer"><i class="fas fa-hand-pointer"></i></div>
-            <p class="education-item"><a href="https://www.parchment.com/u/award/bb4099bcde05be95743325a919f1f578" target="_blank">Associate in General Studies</a></p>
-            <p class="education-item"><a href="https://www.parchment.com/u/award/7cdde7d52ef1491f01f34938ec6e4b13" target="_blank">Associate of Science - AS in Software Development</a></p>
-            <p class="education-item"><a href="https://www.parchment.com/u/award/57cf022f3e8e77983ef0eae25a55b733" target="_blank">Advanced Certificate in Software Development</a></p>
-            <p class="education-item"><a href="https://www.parchment.com/u/award/54d14e9d77d3669e6c1b099e69dd68fb" target="_blank">Basic Certificate in Web Development</a></p>
-            <p class="education-item"><a href="https://www.parchment.com/u/award/57cf022f3e8e77983ef0eae25a55b733" target="_blank">HarvardX CS50x Intro to Computer Science</a></p>
-            <p class="education-item"><a href="https://www.parchment.com/u/award/57cf022f3e8e77983ef0eae25a55b733" target="_blank">HarvardX CS50x Intro to Artificial Intelligence with Python</a></p>
-        
-        <br>
-        <br>
-        <br>
-        
-        <h2>Experience</h2>
-        <p><em>July 2024 - Active</em> - <strong>SaaS Productized Co.</strong> <br><em>(Software+Web3+Mobile Developer)</em></p>
-        <p><em>March 2023 - Active</em> - <strong>GymWolf Co.</strong> <br><em>(Web Developer)</em></p>
-        <p><em>December 2021 - Active</em> - <strong>Querrepario Mexican Kitchen</strong> <br><em>(Web Developer)</em></p>
-        <p><em>November 2019 - July 2024</em> - <strong>Freelance work on Upwork, Fiverr etc.</strong> <br><em>(Software+Web Developer)</em></p>
-        <p><em>November 2016 - Active</em> - <strong>Maybe Not Co.</strong> <br><em>(Graphic Designer+ Software+Web3 Developer)</em></p>
         </section>
 
-        <section id="portfolio" class="portfolio">
-            <h1>Featured Projects</h1>
-            <div class="projects">
-                <div class="project">
-                    <h2>maybenot.com</h2>                
-                    <iframe id="8b9281ad-097b-4408-88e2-ef824efa63eb" src="https://www.vectary.com/viewer/v1/?model=8b9281ad-097b-4408-88e2-ef824efa63eb&env=studio3&turntable=1" frameborder="0" width="100%" height="480"></iframe>
-                    <p>Website for Futuristic Clothing Ecommerce store.</p>
-                    <div class="description">As Co-founder since 2016, I have successfully managed both the front-end and back-end development of our website using custom code. As the full-time designer, I have also implemented complete vertical integration to streamline the creation and market delivery of our clothing line.</div>
-                    <a href="https://www.vectary.com/p/4FMt07vxv2pzZ1Xkw4Ro8B" target="_blank">Visit maybenot.com</a>
+        <section id="stack" class="section muted">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Tech stack</p>
+                    <h2>Tools I ship with.</h2>
+                    <p class="lede">Inspired by peers like fernandolpz.dev, my toolkit blends modern frontend craft with reliable backend foundations.</p>
                 </div>
-
-                <div class="project">
-                    <h2>saasproductized.com</h2>
-                    <img src="logos/SaaS.png" alt="SaaS Logo" style="width:200px; height:auto;">
-                    <p>B2B SaaS company focused on delivering high-performance software solutions as intuitive scalable products.</p>
-                    <div class="description">As Founder I have taken on the full range of responsibilities required to grow this business, ensuring its dedication to high-performance software solutions.</div>
-                    <a href="https://SaaSProductized.com" target="_blank" style="position: absolute; bottom: 10px; width: 100%; text-align: center;">SaaSProductized.com</a>
-                </div>
-                <div class="project">
-                    <h2>romanoroofing.co</h2>
-                    <img src="logos/Romano.png" alt="Romano Roofing Logo" style="width:200px; height:auto;">
-                    <p>Responsive website for professional roofing services.</p>
-                    <div class="description">Developed a modern site showcasing roofing solutions, including contact forms and service descriptions.</div>
-                    <a href="https://romanoroofing.co" target="_blank" style="position: absolute; bottom: 10px; width: 100%; text-align: center;">Visit romanoroofing.co</a>
-                </div>
-                <div class="project">
-                    <h2>anaslandscaping.com</h2>
-                    <img src="logos/anas.png" alt="Anas Landscaping Logo" style="width:200px; height:auto;">
-                    <p>Website for a local landscaping and outdoor services company.</p>
-                    <div class="description">Built a clean, mobile-friendly site highlighting services, galleries, and customer contact options.</div>
-                    <a href="https://anaslandscaping.com" target="_blank" style="position: absolute; bottom: 10px; width: 100%; text-align: center;">Visit anaslandscaping.com</a>
-                </div>
-                <div class="project">
-                    <h2>eliteclearservices.com</h2>
-                    <img src="logos/ECS.png" alt="Elite Clear Services Logo" style="width:200px; height:auto;">
-                    <p>Professional cleaning services website for residential and commercial clients.</p>
-                    <div class="description">Implemented responsive design and service booking features to support a growing cleaning business.</div>
-                    <a href="https://eliteclearservices.com" target="_blank" style="position: absolute; bottom: 10px; width: 100%; text-align: center;">Visit eliteclearservices.com</a>
-                </div>
-                <div class="project">
-                    <h2>marcoromano.dev</h2>
-                    <img src="logos/8BitMARCO.ico" alt="SaaS Logo" style="width:150px; height:auto;">
-                    <p>My personal portfolio website showcasing all of my Software+Web3 Development work.</p>
-                    <div class="description">Created and manage both the front and back end using HTML, CSS, and JavaScript. Includes projects, services, and contact sections.</div>
-                    <a href="https://marcoromano.dev" target="_blank">Visit marcoromano.dev</a>
-                </div>
-                
-                <div class="project">
-                    <h2>querrepario.com</h2>                
-                    <img src="logos/querrepario_logo.png" alt="Querrepario Logo" style="width:200px; height:auto;">
-                    <p>Website for Authentic Mexican Quisine.</p>
-                    <div class="description">Developed the entire website including the design, development, and deployment. Worked on SEO optimization and integration with social media platforms.</div>
-                    <a href="https://querrepario.com" target="_blank" style="position: absolute; bottom: 10px; width: 100%; text-align: center;">Visit querrepario.com</a>
+                <div class="stack-grid">
+                    <div class="stack-card">
+                        <h4>Frontend</h4>
+                        <div class="stack-chips">
+                            <span class="chip">React</span>
+                            <span class="chip">Next.js</span>
+                            <span class="chip">TypeScript</span>
+                            <span class="chip">Tailwind CSS</span>
+                            <span class="chip">CSS Modules</span>
+                        </div>
+                    </div>
+                    <div class="stack-card">
+                        <h4>Backend & APIs</h4>
+                        <div class="stack-chips">
+                            <span class="chip">Node.js</span>
+                            <span class="chip">Express</span>
+                            <span class="chip">Prisma</span>
+                            <span class="chip">tRPC</span>
+                            <span class="chip">GraphQL</span>
+                        </div>
+                    </div>
+                    <div class="stack-card">
+                        <h4>Data & Cloud</h4>
+                        <div class="stack-chips">
+                            <span class="chip">PostgreSQL</span>
+                            <span class="chip">Supabase</span>
+                            <span class="chip">MongoDB</span>
+                            <span class="chip">AWS</span>
+                            <span class="chip">Vercel</span>
+                        </div>
+                    </div>
+                    <div class="stack-card">
+                        <h4>Dev Experience</h4>
+                        <div class="stack-chips">
+                            <span class="chip">GitHub</span>
+                            <span class="chip">Docker</span>
+                            <span class="chip">CI/CD</span>
+                            <span class="chip">Automated testing</span>
+                            <span class="chip">Performance audits</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="more-projects" id="more-projects" style="display: none;">
-                 <div class="project">
-                    <h2>gymwolf.co</h2>
-                    <img src="logos/gymwolf_logo.png" alt="GymWolf Logo" style="width:200px; height:auto;">
-                    <p>Website for Start Up Fitness+Lifestyle Brand</p>
-                    <div class="description">Created a responsive website for lifestyle and ecommerce brand, including integrated membership management and online coaching features.</div>
-                    <a href="https://gymwolf.co" target="_blank" style="position: absolute; bottom: 10px; width: 100%; text-align: center;">Visit gymwolf.co</a>
-                </div>
-                
-                <div class="project">
-                    <h2>4everbuddies.com</h2>
-                    <img src="logos/4everbuddies_logo.png" alt="4everbuddies Logo" style="width:200px; height:auto;">
-                    <p>Dropshipping Website for Pet Care Products.</p>
-                    <div class="description">Developed an e-commerce platform leveraging Shopify to integrate automated dropshipping processes with third-party applications. Ensured a seamless user experience and secure payment gateways for this business startup.</div>
-                    <a href="https://4everbuddies.com" target="_blank" style="position: absolute; bottom: 10px; width: 100%; text-align: center;">Visit 4everbuddies.com</a>
-                </div>
-                
-            </div>
-            <button id="see-more-btn" class="resume-button" onclick="toggleMoreProjects()">See More</button>
-
-            <h2>Services</h2>
-            <div class="services">
-                <article class="service">
-                    <h3>
-                        <button class="service-toggle" aria-expanded="false" aria-controls="service1-desc">
-                            <i class="fas fa-code" aria-hidden="true"></i>
-                            <span class="service-title">Software Development</span>
-                        </button>
-                    </h3>
-                    <div id="service1-desc" class="service-description">From desktop applications to cloud-based solutions, I specialize in developing software that meets the specific needs of your business. Whether it’s custom software, enterprise applications, or web-based solutions, I leverage my skills to deliver efficient, scalable, and maintainable software.</div>
-                </article>
-                <article class="service">
-                    <h3>
-                        <button class="service-toggle" aria-expanded="false" aria-controls="service2-desc">
-                            <i class="fas fa-globe" aria-hidden="true"></i>
-                            <span class="service-title">Web3</span>
-                        </button>
-                    </h3>
-                    <div id="service2-desc" class="service-description">I specialize in Web3 development, focusing on building decentralized applications (dApps) that leverage blockchain technology. From smart contract development to integrating blockchain into your existing systems, I offer services that help you tap into the next generation of the internet.</div>
-                </article>
-                <article class="service">
-                    <h3>
-                        <button class="service-toggle" aria-expanded="false" aria-controls="service3-desc">
-                            <i class="fas fa-laptop-code" aria-hidden="true"></i>
-                            <span class="service-title">Web Application Development</span>
-                        </button>
-                    </h3>
-                    <div id="service3-desc" class="service-description">I offer comprehensive web application development services, including frontend and backend development, responsive design, and performance optimization. My focus is on creating user-friendly, scalable, and secure applications.</div>
-                </article>
-                <article class="service">
-                    <h3>
-                        <button class="service-toggle" aria-expanded="false" aria-controls="service4-desc">
-                            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
-                            <span class="service-title">Mobile Application Development</span>
-                        </button>
-                    </h3>
-                    <div id="service4-desc" class="service-description">I provide mobile application development services for both Android and iOS platforms, utilizing cross-platform frameworks like React Native to ensure consistent performance and user experience across devices.</div>
-                </article>
-                <article class="service">
-                    <h3>
-                        <button class="service-toggle" aria-expanded="false" aria-controls="service5-desc">
-                            <i class="fas fa-paint-brush" aria-hidden="true"></i>
-                            <span class="service-title">Front End Development</span>
-                        </button>
-                    </h3>
-                    <div id="service5-desc" class="service-description">Front-end development services focus on creating visually appealing and interactive user interfaces. I use modern technologies like HTML, CSS, JavaScript, and React to build responsive and accessible websites that provide an excellent user experience.</div>
-                </article>
-                <article class="service">
-                    <h3>
-                        <button class="service-toggle" aria-expanded="false" aria-controls="service6-desc">
-                            <i class="fas fa-server" aria-hidden="true"></i>
-                            <span class="service-title">Back End Development</span>
-                        </button>
-                    </h3>
-                    <div id="service6-desc" class="service-description">My backend development services include creating robust APIs, integrating databases, and ensuring secure and efficient data handling. I utilize technologies like Node.js, Express, MySQL, and MongoDB to build scalable backend systems.</div>
-                </article>
-            </div>
-
         </section>
-        
-        <section id="contact" class="contact">
-            <h1>Contact Me</h1>
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+
+        <section id="portfolio" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Selected work</p>
+                    <h2>Recent projects that mirror production quality.</h2>
+                    <p class="lede">From SaaS to ecommerce and service brands, each build balances conversion, usability, and maintainability.</p>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="card-header">
+                            <h3>maybenot.com</h3>
+                            <span class="badge">Ecommerce</span>
+                        </div>
+                        <p>Futuristic clothing brand with custom storefront, immersive visuals, and integrated production workflows.</p>
+                        <a class="text-link" href="https://www.vectary.com/p/4FMt07vxv2pzZ1Xkw4Ro8B" target="_blank" rel="noopener">View experience</a>
+                    </article>
+                    <article class="project-card">
+                        <div class="card-header">
+                            <h3>saasproductized.com</h3>
+                            <span class="badge">SaaS</span>
+                        </div>
+                        <p>Productized software solutions with scalable architecture and a conversion-optimized marketing layer.</p>
+                        <a class="text-link" href="https://SaaSProductized.com" target="_blank" rel="noopener">Visit site</a>
+                    </article>
+                    <article class="project-card">
+                        <div class="card-header">
+                            <h3>romanoroofing.co</h3>
+                            <span class="badge">Services</span>
+                        </div>
+                        <p>Responsive roofing brand site with lead capture, service highlights, and localized SEO foundations.</p>
+                        <a class="text-link" href="https://romanoroofing.co" target="_blank" rel="noopener">Explore</a>
+                    </article>
+                    <article class="project-card">
+                        <div class="card-header">
+                            <h3>anaslandscaping.com</h3>
+                            <span class="badge">Services</span>
+                        </div>
+                        <p>Modern landscaping presence featuring galleries, service breakdowns, and streamlined contact flows.</p>
+                        <a class="text-link" href="https://anaslandscaping.com" target="_blank" rel="noopener">Explore</a>
+                    </article>
+                    <article class="project-card">
+                        <div class="card-header">
+                            <h3>eliteclearservices.com</h3>
+                            <span class="badge">Services</span>
+                        </div>
+                        <p>Professional cleaning site with responsive layouts, booking pathways, and trust-focused content.</p>
+                        <a class="text-link" href="https://eliteclearservices.com" target="_blank" rel="noopener">Explore</a>
+                    </article>
+                    <article class="project-card">
+                        <div class="card-header">
+                            <h3>marcoromano.dev</h3>
+                            <span class="badge">Portfolio</span>
+                        </div>
+                        <p>Personal showcase for software and Web3 work with curated projects, services, and contact channels.</p>
+                        <a class="text-link" href="https://marcoromano.dev" target="_blank" rel="noopener">Visit site</a>
+                    </article>
+                    <article class="project-card">
+                        <div class="card-header">
+                            <h3>querrepario.com</h3>
+                            <span class="badge">Hospitality</span>
+                        </div>
+                        <p>Authentic Mexican cuisine site with rich visuals, menu highlights, and social integrations.</p>
+                        <a class="text-link" href="https://querrepario.com" target="_blank" rel="noopener">Explore</a>
+                    </article>
+                    <article class="project-card">
+                        <div class="card-header">
+                            <h3>gymwolf.co</h3>
+                            <span class="badge">Fitness</span>
+                        </div>
+                        <p>Membership-friendly lifestyle platform with ecommerce capabilities and coaching integrations.</p>
+                        <a class="text-link" href="https://gymwolf.co" target="_blank" rel="noopener">Explore</a>
+                    </article>
+                    <article class="project-card">
+                        <div class="card-header">
+                            <h3>4everbuddies.com</h3>
+                            <span class="badge">Ecommerce</span>
+                        </div>
+                        <p>Automated dropshipping setup leveraging Shopify integrations for a seamless customer journey.</p>
+                        <a class="text-link" href="https://4everbuddies.com" target="_blank" rel="noopener">Explore</a>
+                    </article>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
+            </div>
+        </section>
+
+        <section id="services" class="section muted">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Services</p>
+                    <h2>End-to-end execution, from concept to launch.</h2>
                 </div>
-                <button type="submit">Send Message</button>
-            </form>
-            <div class="contact-info">
-                <div class="email-info">
-                    <p>Email: marcoaromanojr@gmail.com</p>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="icon-circle"><i class="fa-solid fa-code"></i></div>
+                        <div>
+                            <h3>Software engineering</h3>
+                            <p>Custom applications, cloud-native systems, and maintainable architectures built for scale.</p>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="icon-circle"><i class="fa-solid fa-link"></i></div>
+                        <div>
+                            <h3>Web3 experiences</h3>
+                            <p>Smart contract integrations, dApps, and blockchain-enabled products with user-first design.</p>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="icon-circle"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div>
+                            <h3>Web & mobile</h3>
+                            <p>Responsive experiences across devices with performance budgets, accessibility, and analytics baked in.</p>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="icon-circle"><i class="fa-solid fa-chart-line"></i></div>
+                        <div>
+                            <h3>Product optimization</h3>
+                            <p>Conversion-focused UX, rapid experimentation, and observability to keep teams shipping confidently.</p>
+                        </div>
+                    </article>
                 </div>
-                <div class="social-links">
-                    <a href="https://stackoverflow.com/users/yourid" target="_blank"><i class="fab fa-stack-overflow"></i></a>
-                    <a href="https://www.instagram.com/MarcoRomanoJr" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://github.com/marcoromanodev" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/marcoromanojr" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://x.com/MarcoRomanoJr" target="_blank">
-                        <img src="logos/xlogo.png" alt="X logo" style="width: 24px; height: 24px;">
-                    </a>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container contact-layout">
+                <div class="section-header">
+                    <p class="eyebrow">Contact</p>
+                    <h2>Let’s build something ambitious.</h2>
+                    <p class="lede">Tell me about your idea, product roadmap, or team needs. I’ll respond quickly with next steps.</p>
                 </div>
-                <div class="location-info">
-                    <p>📍 Chicago, IL</p>
-                </div>
+                <form id="contactForm" class="contact-form">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+                    <label for="message">Project details</label>
+                    <textarea id="message" name="message" rows="4" placeholder="What are you building?" required></textarea>
+
+                    <button type="submit" class="primary-btn full">Send message</button>
+                </form>
             </div>
         </section>
     </main>
-    <footer>
-        <p class="graffiti">Made with <span style="color: red;">❤️</span> by Marco Romano JR in 2024</p>
+
+    <footer class="site-footer">
+        <div class="container footer-layout">
+            <p>© 2024 Marco Romano Jr — Built with care and modern tooling.</p>
+            <div class="footer-links">
+                <a href="https://stackoverflow.com/users/27101244/marcoromanodev" target="_blank" rel="noopener">Stack Overflow</a>
+                <a href="https://github.com/marcoromanodev" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/marcoromanojr" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
