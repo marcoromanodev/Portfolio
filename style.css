@@ -189,6 +189,33 @@ img {
     flex-wrap: wrap;
 }
 
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.about-panels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+.panel {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 1.2rem 1.3rem;
+    box-shadow: var(--shadow);
+}
+
+.panel-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
 .meta-bar {
     display: flex;
     flex-wrap: wrap;
@@ -557,7 +584,7 @@ img {
 }
 
 .education-list i {
-    color: var(--accent);
+    color: #fff;
 }
 
 .education-list a {
@@ -617,6 +644,30 @@ img {
     gap: 1rem;
 }
 
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.footer-social a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border);
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+.footer-social a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 123, 95, 0.6);
+    box-shadow: 0 10px 40px rgba(255, 123, 95, 0.25);
+}
+
 .footer-links a {
     color: var(--text);
     border-bottom: 1px solid transparent;
@@ -663,5 +714,9 @@ img {
     .services-grid,
     .contact-layout {
         grid-template-columns: 1fr;
+    }
+
+    .white-logo {
+        filter: brightness(0) invert(1) contrast(1.05) saturate(0.9);
     }
 }

@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="icon" href="logos/8BitMARCO.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.6.2/dist/email.min.js"></script>
@@ -29,7 +29,6 @@
                 <ul class="nav-links">
                     <li><a href="#home" class="nav-link active">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#stack" class="nav-link">Tech</a></li>
                     <li><a href="#portfolio" class="nav-link">Projects</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -90,67 +89,87 @@
                     <h2>Blending software craftsmanship with business impact.</h2>
                     <p class="lede">I’m a Software Development Engineer with a focus on scalable architectures, delightful interfaces, and dependable delivery. I iterate quickly, measure outcomes, and keep shipping.</p>
                 </div>
-                <div class="cards-grid">
-                    <article class="info-card">
-                        <div class="icon-circle"><i class="fa-solid fa-network-wired"></i></div>
-                        <h3>Systems thinking</h3>
-                        <p>From cloud to client, I design resilient systems with predictable performance and clean handoffs between layers.</p>
-                    </article>
-                    <article class="info-card">
-                        <div class="icon-circle"><i class="fa-solid fa-cubes"></i></div>
-                        <h3>Product focus</h3>
-                        <p>Experience across SaaS, ecommerce, and agency work means I build what matters—features that move metrics.</p>
-                    </article>
-                    <article class="info-card">
-                        <div class="icon-circle"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                        <h3>Polished delivery</h3>
-                        <p>Modern UI, thoughtful animations, and accessibility-first practices so every release feels premium.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="section muted">
-            <div class="container">
-                <div class="section-header">
-                    <p class="eyebrow">Experience</p>
-                    <h2>Roles that sharpened my engineering practice.</h2>
-                    <p class="lede">Hands-on delivery across product, agency, and freelance environments with end-to-end ownership.</p>
-                </div>
-                <div class="experience-grid">
-                    <article class="experience-card">
-                        <div class="experience-meta">
-                            <span class="icon-circle"><i class="fa-solid fa-building"></i></span>
-                            <div>
-                                <h3>Founder & Full-Stack Engineer</h3>
-                                <p class="company">SaaSProductized.com</p>
-                                <p class="dates">2022 — Present</p>
+                <div class="about-grid">
+                    <div class="cards-grid">
+                        <article class="info-card">
+                            <div class="icon-circle"><i class="fa-solid fa-network-wired"></i></div>
+                            <h3>Systems thinking</h3>
+                            <p>From cloud to client, I design resilient systems with predictable performance and clean handoffs between layers.</p>
+                        </article>
+                        <article class="info-card">
+                            <div class="icon-circle"><i class="fa-solid fa-cubes"></i></div>
+                            <h3>Product focus</h3>
+                            <p>Experience across SaaS, ecommerce, and agency work means I build what matters—features that move metrics.</p>
+                        </article>
+                        <article class="info-card">
+                            <div class="icon-circle"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <h3>Polished delivery</h3>
+                            <p>Modern UI, thoughtful animations, and accessibility-first practices so every release feels premium.</p>
+                        </article>
+                    </div>
+                    <div class="about-panels">
+                        <div class="panel">
+                            <div class="panel-header">
+                                <span class="icon-circle"><i class="fa-solid fa-briefcase"></i></span>
+                                <div>
+                                    <p class="eyebrow">Experience</p>
+                                    <h3>Roles that sharpened my engineering practice.</h3>
+                                </div>
+                            </div>
+                            <div class="experience-grid">
+                                <article class="experience-card">
+                                    <div class="experience-meta">
+                                        <span class="icon-circle"><i class="fa-solid fa-building"></i></span>
+                                        <div>
+                                            <h3>Founder & Full-Stack Engineer</h3>
+                                            <p class="company">SaaSProductized.com</p>
+                                            <p class="dates">2022 — Present</p>
+                                        </div>
+                                    </div>
+                                    <p>Shipped production-ready SaaS accelerators, architected reusable components, and led delivery for client builds.</p>
+                                </article>
+                                <article class="experience-card">
+                                    <div class="experience-meta">
+                                        <span class="icon-circle"><i class="fa-solid fa-code-branch"></i></span>
+                                        <div>
+                                            <h3>Software Development Engineer</h3>
+                                            <p class="company">Freelance</p>
+                                            <p class="dates">2019 — 2022</p>
+                                        </div>
+                                    </div>
+                                    <p>Partnered with startups and service brands to build responsive web experiences, integrating analytics and automation.</p>
+                                </article>
+                                <article class="experience-card">
+                                    <div class="experience-meta">
+                                        <span class="icon-circle"><i class="fa-solid fa-graduation-cap"></i></span>
+                                        <div>
+                                            <h3>Technology Specialist</h3>
+                                            <p class="company">College IT Lab</p>
+                                            <p class="dates">2017 — 2019</p>
+                                        </div>
+                                    </div>
+                                    <p>Supported students with development tooling, deployed lab systems, and documented best practices for peer teams.</p>
+                                </article>
                             </div>
                         </div>
-                        <p>Shipped production-ready SaaS accelerators, architected reusable components, and led delivery for client builds.</p>
-                    </article>
-                    <article class="experience-card">
-                        <div class="experience-meta">
-                            <span class="icon-circle"><i class="fa-solid fa-code-branch"></i></span>
-                            <div>
-                                <h3>Software Development Engineer</h3>
-                                <p class="company">Freelance</p>
-                                <p class="dates">2019 — 2022</p>
+                        <div class="panel">
+                            <div class="panel-header">
+                                <span class="icon-circle"><i class="fa-solid fa-user-graduate"></i></span>
+                                <div>
+                                    <p class="eyebrow">Education</p>
+                                    <h3>Credentials that keep me sharp.</h3>
+                                </div>
                             </div>
+                            <ul class="education-list">
+                                <li><i class="fa-solid fa-graduation-cap"></i><a href="https://www.parchment.com/u/award/bb4099bcde05be95743325a919f1f578" target="_blank" rel="noopener">Associate in General Studies</a></li>
+                                <li><i class="fa-solid fa-laptop-code"></i><a href="https://www.parchment.com/u/award/7cdde7d52ef1491f01f34938ec6e4b13" target="_blank" rel="noopener">Associate of Science in Software Development</a></li>
+                                <li><i class="fa-solid fa-certificate"></i><a href="https://www.parchment.com/u/award/57cf022f3e8e77983ef0eae25a55b733" target="_blank" rel="noopener">Advanced Certificate in Software Development</a></li>
+                                <li><i class="fa-solid fa-code"></i><a href="https://www.parchment.com/u/award/54d14e9d77d3669e6c1b099e69dd68fb" target="_blank" rel="noopener">Basic Certificate in Web Development</a></li>
+                                <li><i class="fa-solid fa-brain"></i><a href="https://www.parchment.com/u/award/57cf022f3e8e77983ef0eae25a55b733" target="_blank" rel="noopener">HarvardX CS50x Intro to Computer Science</a></li>
+                                <li><i class="fa-solid fa-robot"></i><a href="https://www.parchment.com/u/award/57cf022f3e8e77983ef0eae25a55b733" target="_blank" rel="noopener">HarvardX CS50x Intro to Artificial Intelligence with Python</a></li>
+                            </ul>
                         </div>
-                        <p>Partnered with startups and service brands to build responsive web experiences, integrating analytics and automation.</p>
-                    </article>
-                    <article class="experience-card">
-                        <div class="experience-meta">
-                            <span class="icon-circle"><i class="fa-solid fa-graduation-cap"></i></span>
-                            <div>
-                                <h3>Technology Specialist</h3>
-                                <p class="company">College IT Lab</p>
-                                <p class="dates">2017 — 2019</p>
-                            </div>
-                        </div>
-                        <p>Supported students with development tooling, deployed lab systems, and documented best practices for peer teams.</p>
-                    </article>
+                    </div>
                 </div>
             </div>
         </section>
@@ -204,24 +223,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="education" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <p class="eyebrow">Education</p>
-                    <h2>Credentials that keep me sharp.</h2>
-                    <p class="lede">Formal degrees and continued coursework that ground my hands-on engineering work.</p>
-                </div>
-                <ul class="education-list">
-                    <li><i class="fa-solid fa-graduation-cap"></i><a href="https://www.parchment.com/u/award/bb4099bcde05be95743325a919f1f578" target="_blank" rel="noopener">Associate in General Studies</a></li>
-                    <li><i class="fa-solid fa-laptop-code"></i><a href="https://www.parchment.com/u/award/7cdde7d52ef1491f01f34938ec6e4b13" target="_blank" rel="noopener">Associate of Science in Software Development</a></li>
-                    <li><i class="fa-solid fa-certificate"></i><a href="https://www.parchment.com/u/award/57cf022f3e8e77983ef0eae25a55b733" target="_blank" rel="noopener">Advanced Certificate in Software Development</a></li>
-                    <li><i class="fa-solid fa-code"></i><a href="https://www.parchment.com/u/award/54d14e9d77d3669e6c1b099e69dd68fb" target="_blank" rel="noopener">Basic Certificate in Web Development</a></li>
-                    <li><i class="fa-solid fa-brain"></i><a href="https://www.parchment.com/u/award/57cf022f3e8e77983ef0eae25a55b733" target="_blank" rel="noopener">HarvardX CS50x Intro to Computer Science</a></li>
-                    <li><i class="fa-solid fa-robot"></i><a href="https://www.parchment.com/u/award/57cf022f3e8e77983ef0eae25a55b733" target="_blank" rel="noopener">HarvardX CS50x Intro to Artificial Intelligence with Python</a></li>
-                </ul>
             </div>
         </section>
 
@@ -379,6 +380,13 @@
     <footer class="site-footer">
         <div class="container footer-layout">
             <p>© 2024 Marco Romano Jr — Made with <span class="heart">♥</span> and modern tools.</p>
+            <div class="footer-social">
+                <a href="https://github.com/marcoromanodev" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/marcoromanojr" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/MarcoRomanoJr" aria-label="X" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/MarcoRomanoJr" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                <a href="https://stackoverflow.com/users/27101244/marcoromanodev" aria-label="Stack Overflow" target="_blank" rel="noopener"><i class="fa-brands fa-stack-overflow"></i></a>
+            </div>
             <div class="footer-links">
                 <a href="https://stackoverflow.com/users/27101244/marcoromanodev" target="_blank" rel="noopener">Stack Overflow</a>
                 <a href="https://github.com/marcoromanodev" target="_blank" rel="noopener">GitHub</a>
