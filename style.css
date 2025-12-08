@@ -317,10 +317,21 @@ img {
 }
 
 .pulse {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    position: relative;
     background: var(--accent-2);
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23fff" d="M12 2l2.92 6.26L22 9.27l-5 4.87L18.84 21 12 17.77 5.16 21 7 14.14 2 9.27l7.08-1.01z"/></svg>') center/contain no-repeat;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="white" d="M12 2l2.92 6.26L22 9.27l-5 4.87L18.84 21 12 17.77 5.16 21 7 14.14 2 9.27l7.08-1.01z"/></svg>') center/contain no-repeat;
+    flex-shrink: 0;
+}
+
+.pulse::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
     box-shadow: 0 0 0 0 rgba(255, 179, 71, 0.35);
     animation: pulse 2s infinite;
 }
@@ -424,6 +435,7 @@ img {
     object-fit: contain;
     margin-right: 0.4rem;
     display: inline-block;
+    flex-shrink: 0;
 }
 
 .stack-grid {
@@ -723,5 +735,21 @@ img {
 
     .white-logo {
         filter: brightness(0) invert(1) contrast(1.05) saturate(0.9);
+    }
+
+    .chip-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+        width: 100%;
     }
 }
