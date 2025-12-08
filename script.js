@@ -22,18 +22,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Active nav highlighting
     const navLinks = document.querySelectorAll('.nav-link');
-    const sections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute('href')));
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const index = sections.indexOf(entry.target);
-            if (entry.isIntersecting && index >= 0) {
-                navLinks.forEach(link => link.classList.remove('active'));
-                navLinks[index].classList.add('active');
+    const navTargets = Array.from(navLinks)
+        .map(link => ({ link, section: document.querySelector(link.getAttribute('href')) }))
+        .filter(item => item.section);
+
+    const setActiveNav = () => {
+        const scrollPosition = window.scrollY + window.innerHeight * 0.35;
+        let activeItem = navTargets[0];
+
+        navTargets.forEach(item => {
+            const top = item.section.offsetTop - 120;
+            const bottom = top + item.section.offsetHeight;
+            if (scrollPosition >= top && scrollPosition < bottom) {
+                activeItem = item;
             }
         });
-    }, { threshold: 0.4 });
 
-    sections.forEach(section => section && observer.observe(section));
+        navLinks.forEach(link => link.classList.remove('active'));
+        activeItem?.link.classList.add('active');
+    };
+
+    window.addEventListener('scroll', setActiveNav, { passive: true });
+    setActiveNav();
 
     // EmailJS contact form
     const form = document.getElementById('contactForm');
