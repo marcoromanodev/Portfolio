@@ -252,6 +252,8 @@ img {
     display: flex;
     align-items: center;
     gap: 0.85rem;
+    justify-content: center;
+    margin-top: 0.8rem;
 }
 
 .social-row a {
@@ -281,11 +283,16 @@ img {
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
     border: 1px solid var(--border);
     border-radius: 20px;
-    padding: 1.2rem;
+    padding: 1.4rem 1.2rem;
     box-shadow: var(--shadow);
     width: min(360px, 100%);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    text-align: center;
 }
 
 .glass-card::after {
@@ -301,18 +308,20 @@ img {
 }
 
 .headshot-modern {
-    width: 100%;
-    border-radius: 16px;
+    width: clamp(180px, 60vw, 230px);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
     position: relative;
     z-index: 1;
     border: 1px solid rgba(255, 255, 255, 0.15);
+    object-fit: cover;
 }
 
 .status {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 0.4rem;
     padding: 0.55rem 0.9rem;
     border-radius: 12px;
     background: rgba(255, 179, 71, 0.12);
@@ -369,9 +378,10 @@ img {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
-    margin-top: 1rem;
+    margin-top: 0.6rem;
     position: relative;
     z-index: 1;
+    justify-content: center;
 }
 
 .pill {
